@@ -37,8 +37,10 @@ public class FriendController {
     }
     //同意
     @PostMapping("/agree")
-    public Object agree(@LoginUser User user, @RequestBody Friend friend){
+    public Object agree(@LoginUser User user, @RequestBody Friend friend) {
         friend.setUid(user.getId());
+
+
         return friendService.agree(friend);
     }
 
