@@ -16,6 +16,11 @@ public class User {
         this.image = image;
     }
 
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", image=" + image + ", password=" + password + ", username=" + username + "]";
+    }
+
     // get set
     public long getId() {
         return id;

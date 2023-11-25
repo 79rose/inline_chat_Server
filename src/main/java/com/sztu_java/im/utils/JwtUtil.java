@@ -1,4 +1,5 @@
 // package com.sztu_java.im.utils;
+
 // import com.alibaba.fastjson.JSON;
 // import com.sztu_java.im.pojo.User;
 // import io.jsonwebtoken.Claims;
@@ -69,9 +70,9 @@ import org.springframework.stereotype.Component;
 public class JwtUtil {
     
 // 创建token 
-    public String createJWT(User username) {
+    public String createJWT(User user) {
         Map<String, Object> map = new HashMap<>();
-        map.put("username", username);
+        map.put("user", user);
         return generatorToken(map);
     }
 
@@ -84,7 +85,7 @@ public class JwtUtil {
     public User getToken(String  Font_token) {
         String token = Font_token.substring(12);
         Map<String, Object> map = JSON.parseObject(token, Map.class);
-        String username = map.get("username").toString();
-        return JSON.parseObject(username, User.class);
+        String user = map.get("user").toString();
+        return JSON.parseObject(user, User.class);
     }
 }
