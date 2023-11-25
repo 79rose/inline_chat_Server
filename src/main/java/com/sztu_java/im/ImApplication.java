@@ -1,11 +1,13 @@
 package com.sztu_java.im;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@MapperScan({"com.sztu_java.im.dao"})
 public class ImApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
@@ -18,8 +20,6 @@ public class ImApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		// throw new UnsupportedOperationException("Unimplemented method 'run'");
 		nettyServer.start();
 	}
 

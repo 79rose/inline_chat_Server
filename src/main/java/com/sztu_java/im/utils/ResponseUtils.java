@@ -7,6 +7,7 @@ public class ResponseUtils {
 
     public static Object ok() {
         Map<String, Object> obj = new HashMap<String, Object>();
+        // 设置为0，前端不会显示
         obj.put("errno", 0);
         obj.put("errmsg", "成功");
         return obj;
