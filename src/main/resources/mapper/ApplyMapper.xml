@@ -14,5 +14,9 @@ LEFT JOIN `user` as `b`
 on a.uid = b.id
 WHERE a.tid = #{id}
     </select>
-
+        <!-- // 同意之后删除
+    int delete( Friend friend);-->
+    <delete id="delete" parameterType="com.sztu_java.im.pojo.Apply">
+        delete from apply where uid = #{uid} and tid = #{tid}
+    </delete>
 </mapper>

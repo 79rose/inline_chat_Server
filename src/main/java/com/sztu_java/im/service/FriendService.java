@@ -38,11 +38,14 @@ public class FriendService {
 
 
     public Object agree(Friend friend) {
+        // 同意好友申请
         friendDao.add(friend);
         Friend friend1 = new Friend();
         friend1.setUid(friend.getFid());
         friend1.setFid(friend.getUid());
         friendDao.add(friend1);
+        // 删除好友申请
+        applyDao.delete(friend);
         return ResponseUtils.ok();
     }
 }
