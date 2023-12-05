@@ -1,4 +1,4 @@
--- Active: 1700904447741@@127.0.0.1@3306@mysql
+-- Active: 1701712567790@@127.0.0.1@3306@mysql
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -72,9 +72,9 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'user1', '123456', 'https://cdn.uviewui.com/uview/album/4.jpg');
-INSERT INTO `user` VALUES (2, 'user2', '123456', 'https://img2.baidu.com/it/u=260211041,3935441240&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1676048400&t=1f746e561a2d0cdd7abdd8567e3f620d');
-INSERT INTO `user` VALUES (3, 'user3', '123456', 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg');
-INSERT INTO `user` VALUES (4, 'user4', '123456', 'https://img2.baidu.com/it/u=1035356506,3713698341&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1675962000&t=6ef8fe24b49bb84eca0feeae9ec678d5');
+INSERT INTO `user` VALUES (1, '79rose', '123456', 'https://cdn.uviewui.com/uview/album/4.jpg');
+INSERT INTO `user` VALUES (2, '小忙', '123456', 'https://img2.baidu.com/it/u=260211041,3935441240&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1676048400&t=1f746e561a2d0cdd7abdd8567e3f620d');
+INSERT INTO `user` VALUES (3, '平凡哥', '123456', 'https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg');
+INSERT INTO `user` VALUES (4, '蔡坤', '123456', 'https://img2.baidu.com/it/u=1035356506,3713698341&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1675962000&t=6ef8fe24b49bb84eca0feeae9ec678d5');
 
 SET FOREIGN_KEY_CHECKS = 1;

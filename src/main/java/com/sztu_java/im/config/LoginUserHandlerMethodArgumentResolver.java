@@ -29,9 +29,11 @@ public class LoginUserHandlerMethodArgumentResolver implements HandlerMethodArgu
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         HttpServletRequest httpServletRequest=webRequest.getNativeRequest(HttpServletRequest.class);
         String token = httpServletRequest.getHeader("Authorization");
-        if (StringUtils.isEmpty(token)) {
-            throw new TokenExcption();
-        }
+        System.out.println(token);
+        // System.out.println(1);
+        // if (token == null ) {
+        //     throw new TokenExcption();
+        // }
         // System.out.println(token);
         return jwtUtil.getToken(token);
     }

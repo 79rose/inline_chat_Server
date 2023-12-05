@@ -9,6 +9,5 @@ import java.util.Map;
 
 public interface MessageDao {
     List<Map> list(@Param("from")Long id,@Param("to")Long to);
-
     int add(Message message);
 }

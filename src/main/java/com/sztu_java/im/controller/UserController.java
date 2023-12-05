@@ -23,8 +23,12 @@ public class UserController {
     }
 
     @GetMapping("/getUserByUserName")
-    public Object getUserByUserName(String username){
+    public Object getUserByUserName(String username) {
         return ResponseUtils.ok(userService.getUserByUserName(username));
+    }
+    @GetMapping("/getUserById")
+    public Object getUserById(Integer id) {
+        return ResponseUtils.ok(userService.getUserById(id));
     }
 
 

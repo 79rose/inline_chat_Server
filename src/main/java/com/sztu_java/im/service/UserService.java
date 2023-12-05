@@ -10,6 +10,9 @@ public class UserService {
     private UserDao userDao;
 
     public Object getUserByUserName(String username) {
-       return userDao.getUserByUserName(username);
+        return userDao.getUserByUserName(username);
+    }
+    public Object getUserById(Integer id) {
+        return userDao.getUserById(id);
     }
 }

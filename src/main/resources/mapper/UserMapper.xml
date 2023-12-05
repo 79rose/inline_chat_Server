@@ -6,6 +6,9 @@
 
 
     <select id="getUserByUserName" resultType="com.sztu_java.im.pojo.User">
-        select * from user_im  where username = #{username}
+        select * from user  where username = #{username}
+    </select>
+    <select id="getUserById" resultType="com.sztu_java.im.pojo.User">
+        select * from user  where id = #{id}
     </select>
 </mapper>

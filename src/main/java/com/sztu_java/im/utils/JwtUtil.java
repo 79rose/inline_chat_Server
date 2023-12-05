@@ -63,6 +63,7 @@ import com.sztu_java.im.pojo.User;
 import java.util.HashMap;
 
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
@@ -70,22 +71,28 @@ import org.springframework.stereotype.Component;
 public class JwtUtil {
     
 // 创建token 
-    public String createJWT(User user) {
+public Object createJWT(User user) {
         Map<String, Object> map = new HashMap<>();
         map.put("user", user);
         return generatorToken(map);
     }
 
-    private String generatorToken(Map<String, Object> map) {
-        String token = JSON.toJSONString(map);
-        return "Bearer:sztu_java" + token;
+    private  Object generatorToken(Map<String, Object> map) {
+        String token =   JSON.toJSONString(map);
+        // 返回一个对象 包含user 和 token
+        Map<String, Object> obj = new HashMap<String, Object>();
+        obj.put("user", map.get("user"));
+        obj.put("token", token);
+        return obj;
+        
     }
     
     // 解析token
-    public User getToken(String  Font_token) {
-        String token = Font_token.substring(12);
-        Map<String, Object> map = JSON.parseObject(token, Map.class);
+    public User getToken(String Font_token) {
+        Map<String, Object> map = JSON.parseObject(Font_token, Map.class);
+        // System.out.println(map);
         String user = map.get("user").toString();
+        // System.out.println(user);
         return JSON.parseObject(user, User.class);
     }
 }
